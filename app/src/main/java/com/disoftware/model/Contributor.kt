@@ -8,12 +8,12 @@ import com.google.gson.annotations.SerializedName
     primaryKeys = ["repoName", "repoOwner", "login"],
     foreignKeys = [ForeignKey(
         entity = Repo::class,
-        parentColumns = ["name", "owner_login"],
+        parentColumns = ["name", "owner_login"], // propiedades de la clase Repo (PK)
         childColumns = ["repoName", "repoOwner"],
         onUpdate = ForeignKey.CASCADE
     )]
 )
-data class Contributor(
+data class Contributor (
     @field:SerializedName("login")
     val login: String,
     @field:SerializedName("contributions")
