@@ -27,7 +27,7 @@ data class Repo (
 ) {
     data class Owner (
         @field:SerializedName("login")
-        val loogin: String,
+        val login: String,
         @field:SerializedName("url")
         val url: String?
     )
