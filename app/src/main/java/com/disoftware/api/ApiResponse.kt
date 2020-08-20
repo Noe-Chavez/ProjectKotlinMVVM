@@ -41,7 +41,7 @@ data class ApiSucessResponse<T> (
     val body: T,
     val links: Map<String, String>
 ): ApiResponse<T> () {
-    constructor(body: T, linksHeaders: String?): this(
+    constructor(body: T, linksHeaders: String?): this (
         body = body,
         links = linksHeaders?.extractLinks()?: emptyMap()
     )
