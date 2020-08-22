@@ -8,7 +8,7 @@ import com.disoftware.db.GithubTypeConverters
 @TypeConverters(GithubTypeConverters::class)
 class RepoSearchResult (
     val query: String,
-    val reporIds: List<Int>, // con la clase GithubTypeConverters::class convierte a valor admitido por la DB
+    val repoIds: List<Int>, // con la clase GithubTypeConverters::class convierte a valor admitido por la DB
     val totalCount: Int?,
     val next: Int?
 )
